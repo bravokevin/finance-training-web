@@ -1,17 +1,21 @@
 import React from 'react'
-import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SideBtnWrap, SidebarRoute} from './styles'
+import { SidebarContainer, Icon, CloseIcon, SidebarWrapper, SidebarMenu, SidebarLink, SideBtnWrap, SidebarRoute } from './styles'
 
-const SideBar = () => {
+const SideBar = ({ isOpen, toggle, items }) => {
     return (
-        <SidebarContainer>
-            <Icon>
+        <SidebarContainer isOpen={isOpen} onClick={toggle}>
+            <Icon onClick={toggle}>
                 <CloseIcon />
             </Icon>
             <SidebarWrapper>
-                <SidebarMenu>
-                    <SidebarLink to="about">
-                        About
-                    </SidebarLink>
+            <SidebarMenu>
+                {items.map((item, index) => (
+
+                        <SidebarLink to={item}>
+                            {item}
+                        </SidebarLink>
+
+                ))}
                 </SidebarMenu>
                 <SideBtnWrap>
                     <SidebarRoute to="./signIn">Sign In</SidebarRoute>

@@ -14,13 +14,13 @@ background: #0d0d0d;
 display: grid;
 align-items: center;
 top: 0;
-left: 0;
+right: 0;
 transition: 0.3s ease-in-out;
 
 //sets the sidebar opacity for only be avalible when {isOpen} is true
 
 opacity: ${({ isOpen }) => (isOpen ? '100' : '0')};
-top: ${({ isOpen }) => (isOpen ? '0' : '-100%')}; 
+right: ${({ isOpen }) => (isOpen ? '0' : '-100%')}; 
 
 `
 
@@ -53,6 +53,7 @@ list-style: none;
 transition: 0.2s ease-in-out;
 text-decoration: none;
 color: #fff;
+text-transform: capitalize;
 cursor: pointer;
 
 &:hover{
