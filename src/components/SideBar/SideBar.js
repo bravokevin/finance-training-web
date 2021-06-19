@@ -8,14 +8,14 @@ const SideBar = ({ isOpen, toggle, items }) => {
                 <CloseIcon />
             </Icon>
             <SidebarWrapper>
-            <SidebarMenu>
-                {items.map((item, index) => (
+                <SidebarMenu>
+                    {items.map((item, index) => (
 
-                        <SidebarLink to={item}>
+                        <SidebarLink to={item} onClick={toggle}>
                             {item}
                         </SidebarLink>
 
-                ))}
+                    ))}
                 </SidebarMenu>
                 <SideBtnWrap>
                     <SidebarRoute to="./signIn">Sign In</SidebarRoute>
