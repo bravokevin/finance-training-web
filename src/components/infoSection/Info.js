@@ -16,25 +16,27 @@ import {
     ImgWrap
 } from './Info.styles'
 
-const Info = () => {
+const Info = ({ ligthBg, id, lightText, topLine, dark, headline, description, buttonLabel, img, alt, imgStart }) => {
+
     return (
+        
         <>
-            <InfoContainer>
+            <InfoContainer ligthBg={ligthBg} id={id}>
                 <InfoWrapper>
-                    <InfoRow>
+                    <InfoRow imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>
-                                <TopLine>TopLine</TopLine>
-                                <Heading>Heading</Heading>
-                                <Subtittle>Subtittle</Subtittle>
+                                <TopLine>{topLine}</TopLine>
+                                <Heading lightText={lightText}>{headline}</Heading>
+                                <Subtittle darkText={dark}>{description}</Subtittle>
                                 <BtnWrap>
-                                    <Button>Button</Button>
+                                    <Button to="home">{buttonLabel}</Button>
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img />
+                                <Img src={img.default} alt={alt} />
                             </ImgWrap>
                         </Column2>
                     </InfoRow>
