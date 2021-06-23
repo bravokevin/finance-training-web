@@ -1,7 +1,7 @@
 export const homeObjOne ={
     id: 'about',
     lightBg: false,
-    lightText: true,
+    ligthText: true,
     lightTextDesc: true,
     topLine: "Premium Bank",
     headLine: "Unlimited Transactions with zero fees",

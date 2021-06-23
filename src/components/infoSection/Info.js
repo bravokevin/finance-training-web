@@ -16,7 +16,7 @@ import {
     ImgWrap
 } from './Info.styles'
 
-const Info = ({ ligthBg, id, lightText, topLine, dark, headline, description, buttonLabel, img, alt, imgStart }) => {
+const Info = ({ ligthBg, id, ligthText, topLine, dark, headLine, description, buttonLabel, img, alt, imgStart, primary, dark2, darkText}) => {
 
     return (
         
@@ -27,10 +27,18 @@ const Info = ({ ligthBg, id, lightText, topLine, dark, headline, description, bu
                         <Column1>
                             <TextWrapper>
                                 <TopLine>{topLine}</TopLine>
-                                <Heading lightText={lightText}>{headline}</Heading>
-                                <Subtittle darkText={dark}>{description}</Subtittle>
+                                <Heading ligthText={ligthText}>{headLine}</Heading>
+                                <Subtittle darkText={darkText}>{description}</Subtittle>
                                 <BtnWrap>
-                                    <Button to="home">{buttonLabel}</Button>
+                                    <Button to="home"
+                                    smooth={true}
+                                    duration={500}
+                                    spy={true}
+                                    exact={true}
+                                    offset={-80}
+                                    primary={primary ? 1 : 0}
+                                    dark={dark ? 1 : 0 }
+                                    dark2={dark2 ? 1 : 0}>{buttonLabel}</Button>
                                 </BtnWrap>
                             </TextWrapper>
                         </Column1>
