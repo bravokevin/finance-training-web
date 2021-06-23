@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react';
 import Sidebar from '../components/SideBar/SideBar'
 import Navbar from '../components/NavBarr/Nav'
 import Hero from '../components/heroSection/Hero'
-import Info from '../components/infoSection/Data';
+import Info from '../components/infoSection/Info';
 
 
 
