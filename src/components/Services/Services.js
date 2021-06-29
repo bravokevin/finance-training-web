@@ -7,7 +7,7 @@ import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesI
 const Services = ({info}) => {
   return (
     <>
-      <ServicesContainer>
+      <ServicesContainer id="services">
         <ServicesH1>Ouse Services</ServicesH1>
         <ServicesWrapper>
           {info.map(({tittle, description, icon}) => (

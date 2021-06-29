@@ -33,7 +33,7 @@ export const homeObjTwo ={
 }
 
 export const homeObjTree ={
-    id: 'signup',
+    id: 'sign Up',
     lightBg: true,
     ligthText: false,
     lightTextDesc: false,
