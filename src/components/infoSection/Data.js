@@ -14,4 +14,37 @@ export const homeObjOne ={
     primary: true,
     darkText: false
 }
-console.log(homeObjOne.img)
+
+export const homeObjTwo ={
+    id: 'discover',
+    lightBg: true,
+    ligthText: false,
+    lightTextDesc: false,
+    topLine: "Unlimited Access",
+    headLine: "Login to your account at any time",
+    description: "Get access to our exclusivre app that allows you to send unlimited transactions withouth getting charged any fee.",
+    buttonLabel: "Learn More",
+    imgStart: true,
+    img: require('../../images/svg-2.svg'),
+    alt: 'Pig',
+    dark: false,
+    primary: false,
+    darkText: true
+}
+
+export const homeObjTree ={
+    id: 'signup',
+    lightBg: true,
+    ligthText: false,
+    lightTextDesc: false,
+    topLine: "Join Now",
+    headLine: "Creating an account is extremely easy",
+    description: "Get everything set up and ready in under 10 minutes. All you need to do is add your information and you're ready to go.",
+    buttonLabel: "Start Now",
+    imgStart: true,
+    img: require('../../images/svg-3.svg'),
+    alt: 'Files',
+    dark: false,
+    primary: false,
+    darkText: true
+}
