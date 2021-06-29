@@ -1,16 +1,22 @@
 import React from 'react'
 
-const Services = () => {
+import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP } from './Services.styles'
+
+
+
+const Services = ({info}) => {
   return (
     <>
       <ServicesContainer>
         <ServicesH1>Ouse Services</ServicesH1>
         <ServicesWrapper>
-          <ServicesCard>
-            <ServicesIcon src={icon1} />
-            <ServicesH2>Reduce Expenses</ServicesH2>
-            <ServicesP> We help reduce your fees and encrease your overall revenue</ServicesP>
-          </ServicesCard>
+          {info.map(({tittle, description, icon}) => (
+            <ServicesCard>
+              <ServicesIcon src={icon}/>
+              <ServicesH2>{tittle}</ServicesH2>
+              <ServicesP>{description}</ServicesP>
+            </ServicesCard>
+          ))}
         </ServicesWrapper>
       </ServicesContainer>
     </>

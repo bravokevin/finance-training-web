@@ -8,6 +8,8 @@ import { homeObjOne, homeObjTree, homeObjTwo } from '../components/infoSection/D
 import Services from '../components/Services/Services';
 
 
+import { ServicesInfo } from '../components/Services/Services.info';
+
 
 
 
@@ -20,6 +22,9 @@ const Home = () => {
     const toggle = () => {
         setIsOpen(!isOpen)
     }
+    console.log(ServicesInfo)
+    console.log(ITEMS)
+
 
     return (
         <>
@@ -28,7 +33,7 @@ const Home = () => {
             <Hero />
             <Info {...homeObjOne} />
             <Info {...homeObjTwo} />
-            <Services/>
+            <Services info={ServicesInfo}/>
             <Info {...homeObjTree} />
         </>
     )
