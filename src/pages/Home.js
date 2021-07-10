@@ -9,6 +9,7 @@ import Services from '../components/Services/Services';
 
 
 import { ServicesInfo } from '../components/Services/Services.info';
+import Footer from '../components/footer/Footer';
 
 
 
@@ -35,6 +36,7 @@ const Home = () => {
             <Info {...homeObjTwo} />
             <Services info={ServicesInfo}/>
             <Info {...homeObjTree} />
+            <Footer/>
         </>
     )
 
