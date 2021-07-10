@@ -29,7 +29,8 @@ const Info = ({ lightBg,
   imgStart,
   primary,
   dark2,
-  darkText }) => {
+  darkText,
+to }) => {
 
   return (
 
@@ -43,7 +44,7 @@ const Info = ({ lightBg,
                 <Heading ligthText={ligthText}>{headLine}</Heading>
                 <Subtittle darkText={darkText}>{description}</Subtittle>
                 <BtnWrap>
-                  <Button to="home"
+                  <Button to={to}
                     smooth={true}
                     duration={500}
                     spy={true}

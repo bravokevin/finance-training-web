@@ -12,7 +12,8 @@ export const homeObjOne ={
     alt: 'Car',
     dark: true,
     primary: true,
-    darkText: false
+    darkText: false,
+    to: 'discover'
 }
 
 export const homeObjTwo ={
@@ -29,11 +30,12 @@ export const homeObjTwo ={
     alt: 'Pig',
     dark: false,
     primary: false,
-    darkText: true
+    darkText: true,
+    to: 'signin'
 }
 
 export const homeObjTree ={
-    id: 'sign Up',
+    id: 'signin',
     lightBg: true,
     ligthText: false,
     lightTextDesc: false,
@@ -46,5 +48,6 @@ export const homeObjTree ={
     alt: 'Files',
     dark: false,
     primary: false,
-    darkText: true
+    darkText: true,
+    to: "./signIn"
 }

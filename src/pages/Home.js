@@ -18,7 +18,7 @@ import {animateScroll as scroll} from 'react-scroll'
 
 const Home = () => {
 
-    const ITEMS = ["about", "discover", "services", "sign Up"]
+    const ITEMS = ["about", "discover", "services", "signin"]
     const [isOpen, setIsOpen] = useState(false);
 
     const toggle = () => {

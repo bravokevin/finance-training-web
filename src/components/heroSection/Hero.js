@@ -23,7 +23,7 @@ const Hero = () => {
                     Sign up for a new account today and recive $250 in credit towards your next payment
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to="signup" onMouseEnter={onHover} onMouseLeave={onHover}
+                    <Button to="signin" onMouseEnter={onHover} onMouseLeave={onHover}
                         primary="true"
                         dark="true"
                         smooth={true}
