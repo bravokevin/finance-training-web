@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { FooterContainer, FooterWrapper, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTittle, FooterLink } from "./Footer.styles.js";
+import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from "react-icons/fa"
+
+import { FooterContainer, FooterWrapper, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTittle, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, SocialIcons, SocialIconLink, WebsiteRigths} from "./Footer.styles.js";
 
 const FOOTER_ITEMS1 = [
   {
@@ -41,7 +43,16 @@ const FOOTER_ITEMS2 = [{
       "facebook",
       "youtube",
       "twitter"]
-  }}
+  }
+}
+]
+
+const SOCIAL_MEDIA = [
+  { name: "instagram", icon:  FaInstagram },
+  { name: "twitter", icon: FaTwitter },
+  { name: "linkdin", icon: FaLinkedin },
+  { name: "facebook", icon: FaFacebook }, 
+  { name: "youtube", icon: FaYoutube}
 ]
 
 const Footer = () => {
@@ -89,6 +100,23 @@ const Footer = () => {
             </FooterLinksWrapper>
           ))}
         </FooterLinksContainer>
+        <SocialMedia>
+          <SocialMediaWrap>
+            <SocialLogo to='/'>Dollar</SocialLogo>
+            <WebsiteRigths>{new Date().getFullYear()} all rights reserved</WebsiteRigths>
+            <SocialIcons>
+
+              {SOCIAL_MEDIA.map((i) => (
+                <SocialIconLink href="/" target="_blank" aria-label={i.name}>
+                  {<i.icon/>}
+                </SocialIconLink>
+              ))}
+
+            </SocialIcons>
+
+          </SocialMediaWrap>
+        </SocialMedia>
+
       </FooterWrapper>
     </FooterContainer>
   )
