@@ -11,6 +11,7 @@ import Services from '../components/Services/Services';
 import { ServicesInfo } from '../components/Services/Services.info';
 import Footer from '../components/footer/Footer';
 
+import {animateScroll as scroll} from 'react-scroll'
 
 
 
@@ -23,20 +24,22 @@ const Home = () => {
     const toggle = () => {
         setIsOpen(!isOpen)
     }
-    console.log(ServicesInfo)
-    console.log(ITEMS)
+
+        const toggleHome = ()=>{
+        scroll.scrollToTop();
+    }
 
 
     return (
         <>
             <Sidebar isOpen={isOpen} toggle={toggle} items={ITEMS} />
-            <Navbar toggle={toggle} items={ITEMS} />
+            <Navbar toggle={toggle} items={ITEMS} toggleHome={toggleHome} />
             <Hero />
             <Info {...homeObjOne} />
             <Info {...homeObjTwo} />
             <Services info={ServicesInfo}/>
             <Info {...homeObjTree} />
-            <Footer/>
+            <Footer  toggleHome={toggleHome} />
         </>
     )
 

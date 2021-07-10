@@ -55,7 +55,7 @@ const SOCIAL_MEDIA = [
   { name: "youtube", icon: FaYoutube}
 ]
 
-const Footer = () => {
+const Footer = ({toggleHome}) => {
 
   return (
 
@@ -102,7 +102,7 @@ const Footer = () => {
         </FooterLinksContainer>
         <SocialMedia>
           <SocialMediaWrap>
-            <SocialLogo to='/'>Dollar</SocialLogo>
+            <SocialLogo to='/'onClick={toggleHome} >Dollar</SocialLogo>
             <WebsiteRigths>{new Date().getFullYear()} all rights reserved</WebsiteRigths>
             <SocialIcons>
 
